@@ -1,0 +1,29 @@
+.publicity {
+    .editor {
+        padding: 2rem;
+
+        .editor-header {
+            display: flex;
+
+            button {
+                margin-right: 1rem;
+            }
+        }
+
+        .editor-body {
+            padding: 3rem 0;
+        }
+    }
+
+    .previewer {
+        padding: 2rem;
+
+        .header {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+        .body {
+            padding: 1.4rem 0;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+<nb-card class="tenant">
+    <nb-card-body>
+        <div style="display: flex">
+            <nb-form-field>
+                <nb-icon nbPrefix icon="search-outline" pack="eva"></nb-icon>
+                <input type="text" nbInput [(ngModel)]="query" (input)="filterItem()" />
+            </nb-form-field>
+            <div style="padding: 0 1rem">&nbsp;</div>
+            <button nbButton status="primary" (click)="addItem(dialog)">新增租戶</button>
+        </div>
+
+        <nb-list-item *ngFor="let tenant of queryTenantList; let i = index" (click)="editItem(dialog, i)">
+            <nb-user size="large" [title]="tenant['phone']" name="{{ tenant['first_name'] }} {{ tenant['last_name'] }}">
+            </nb-user>
+        </nb-list-item>
+    </nb-card-body>
+</nb-card>
+
+<!-- Dialog Template -->
+<ng-template #dialog let-data let-ref="dialogRef">
+    <nb-card class="tenant-dialog">
+        <nb-card-header>{{ data.title }}</nb-card-header>
+        <nb-card-body>
+            <!-- First Name -->
+            <div>
+                <label>First Name &nbsp; </label>
+                <input type="text" nbInput [(ngModel)]="addTenant.fname" #fname="ngModel" minlength="3" required />
+            </div>
+            <div *ngIf="fname.invalid && (fname.dirty || fname.touched)" class="alert">
+                <span *ngIf="fname.errors?.['required']">此欄位必填</span>
+                <span *ngIf="fname.errors?.['minlength']">至少輸入 3 個字</span>
+            </div>
+
+            <!-- Last Name -->
+            <form [formGroup]="helloForm">
+                <div>
+                    <label>Last Name &nbsp; </label>
+                    <input type="text" nbInput class="form-control" formControlName="lname" required />
+                </div>
+                <div *ngIf="lname.invalid && (lname.dirty || lname.touched)" class="alert">
+                    <span *ngIf="lname.errors?.['required']">此欄位必填</span>
+                    <span *ngIf="lname.errors?.['minlength']">至少輸入 3 個字</span>
+                </div>
+            </form>
+
+            <!-- Phone Number -->
+            <div>
+                <label>Phone Number &nbsp; </label>
+                <input [ngModelOptions]="{ standalone: true }" type="text" nbInput [(ngModel)]="addTenant.phone" />
+            </div>
+
+            <!-- Address -->
+            <div>
+                <label>Address &nbsp; </label>
+                <input [ngModelOptions]="{ standalone: true }" type="text" nbInput [(ngModel)]="addTenant.address" />
+            </div>
+        </nb-card-body>
+        <nb-card-footer>
+            <div>
+                <!-- 回傳 `debounceClick` 事件，`debounceTime` 改變延遲時間(預設 1 秒) -->
+                <button
+                    nbButton
+                    status="primary"
+                    appDebounceClick
+                    (debounceClick)="ref.close('ok')"
+                    [debounceTime]="700"
+                >
+                    確定
+                </button>
+                &nbsp;
+                <button nbButton (click)="ref.close()">取消</button>
+            </div>
+            <div>
+                <button nbButton status="danger" *ngIf="data.type === 'edit'" (click)="ref.close('delete')">
+                    刪除
+                </button>
+            </div>
+        </nb-card-footer>
+    </nb-card>
+</ng-template>

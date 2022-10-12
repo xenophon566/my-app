@@ -1,0 +1,31 @@
+{
+    "HEADER": {
+        "TITLE": "My-APP",
+        "LANG": {
+            "US": "English",
+            "TW": "Chinese"
+        }
+    },
+    "MENU_ITEMS": {
+        "HOME": {
+            "TITLE": "YOU IN HOME"
+        },
+        "ABOUT": {
+            "TITLE": "About"
+        },
+        "TENANT": {
+            "TITLE": "Tenant"
+        },
+        "LAND": {
+            "TITLE": "Land"
+        },
+        "PUBLICITY": {
+            "TITLE": "Publicity"
+        },
+        "FEATURE": {
+            "TITLE": "Feature",
+            "HELLO": "Hello",
+            "WORLD": "World"
+        }
+    }
+}

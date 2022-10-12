@@ -1,0 +1,22 @@
+<div class="about">
+    <!-- 畫房屋市場成長趨勢 - 折線圖 -->
+    <div class="chart-block">
+        <div echarts [options]="lineOptions"></div>
+    </div>
+    <br />
+    <!-- 畫房屋市場成長趨勢 - 柱狀圖 -->
+    <div class="chart-block">
+        <div echarts [options]="barOptions"></div>
+    </div>
+    <br />
+    <!-- 歷史移轉次數 - 卡片 -->
+    <nb-card accent="primary" status="warning">
+        <nb-card-header>歷史移轉次數</nb-card-header>
+        <nb-card-body>
+            歷史移轉次數為比對政府實價登錄提供之門牌、交易標的、交易樓層資訊而推估生成，再由系統比對當筆與前一筆實價登錄，
+            交易明細完全吻合方計算漲跌幅，當筆交易漲跌幅計算式為(當筆交易之成交總價/前一筆交易之成交總價)-1，
+            計算百分比至小數點後兩位；可能與實際交易有所落差。
+        </nb-card-body>
+    </nb-card>
+    <br />
+</div>

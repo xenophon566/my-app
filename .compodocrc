@@ -1,0 +1,8 @@
+{
+    "output": "./_compodoc/_document",
+    "tsconfig": "./_compodoc/tsconfig.compodoc.json",
+    "assetsFolder": "./_compodoc/assets",
+    "name": "My APP",
+    "port": "3001",
+    "theme": "Vagrant"
+}

@@ -1,0 +1,36 @@
+.tenant {
+    nb-list-item {
+        cursor: pointer;
+    }
+
+    nb-list-item:hover {
+        background-color: #c3c2c238;
+    }
+}
+
+.tenant-dialog {
+    nb-card-body {
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2rem 0 0;
+
+            &.alert {
+                margin: 0;
+                color: red;
+            }
+        }
+
+        span {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    nb-card-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "HEADER": {
+        "TITLE": "My-APP",
+        "LANG": {
+            "US": "英文",
+            "TW": "中文"
+        }
+    },
+    "MENU_ITEMS": {
+        "HOME": {
+            "TITLE": "YOU IN HOME"
+        },
+        "ABOUT": {
+            "TITLE": "公司簡介"
+        },
+        "TENANT": {
+            "TITLE": "租戶管理"
+        },
+        "LAND": {
+            "TITLE": "土地管理"
+        },
+        "PUBLICITY": {
+            "TITLE": "廣告宣傳"
+        },
+        "FEATURE": {
+            "TITLE": "功能模組",
+            "HELLO": "哈囉",
+            "WORLD": "世界"
+        }
+    }
+}

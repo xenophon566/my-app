@@ -1,0 +1,15 @@
+<nb-card class="land">
+    <strong>土地號碼列表 (父元件)</strong>
+    <!-- [data] => 傳到子元件 (newItemEvent) => 傳回父元件 -->
+    <app-input-data [data]="items" (newItemEvent)="actionFromChild($event)"></app-input-data>
+    <ul>
+        <!-- 土地號碼列表 -->
+        <li *ngFor="let item of items">
+            {{ item }}
+        </li>
+    </ul>
+</nb-card>
+
+<nb-card>
+    <app-land-record></app-land-record>
+</nb-card>

@@ -1,0 +1,18 @@
+<nb-layout>
+    <nb-layout-column>
+        <nb-card class="login-portal" [nbSpinner]="loadingSpiner" nbSpinnerSize="large" nbSpinnerStatus="primary">
+            <nb-card-header> 帳戶登入 </nb-card-header>
+            <nb-card-body class="example-items-col">
+                <div>
+                    <input #username type="text" nbInput shape="rectangle" placeholder="帳號" />
+                </div>
+                <div>
+                    <input #password type="password" nbInput shape="rectangle" placeholder="密碼" />
+                </div>
+            </nb-card-body>
+            <nb-card-footer class="btn-area">
+                <button nbButton status="primary" (click)="goLogin(username.value, password.value)">登入</button>
+            </nb-card-footer>
+        </nb-card>
+    </nb-layout-column>
+</nb-layout>

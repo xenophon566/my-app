@@ -1,0 +1,30 @@
+<div class="publicity">
+    <!-- 廣告編輯器 -->
+    <nb-card class="editor">
+        <h4>廣告編輯格式</h4>
+        <div class="editor-header">
+            <button nbButton status="info" (click)="editorTypeChange('text')">廣告文字</button>
+            <button nbButton status="success" (click)="editorTypeChange('link')">廣告連結</button>
+            <button nbButton status="warning" (click)="editorTypeChange('html')">廣告 HTML</button>
+        </div>
+        <div class="editor-body">
+            <!-- viewContainerRef 動態載入 -->
+            <ng-container appPublicityLoader></ng-container>
+        </div>
+        <div class="editor-footer">
+            <button nbButton status="primary" (click)="previewEditor()">預覽</button>
+        </div>
+    </nb-card>
+
+    <!-- 結果預覽 -->
+    <nb-card class="previewer" *ngIf="showResult">
+        <div class="header">結果預覽</div>
+        <div class="body" *ngIf="editorType === 'text'">
+            {{ editorContent }}
+        </div>
+        <div class="body" *ngIf="editorType === 'link'">
+            <a [href]="editorContent"> {{ editorContent }} </a>
+        </div>
+        <div class="body" *ngIf="editorType === 'html'" [innerHTML]="editorContent"></div>
+    </nb-card>
+</div>

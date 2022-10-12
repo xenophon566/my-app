@@ -1,0 +1,29 @@
+<nb-layout class="home">
+    <!-- header -->
+    <nb-layout-header fixed>
+        <div class="header">
+            <a (click)="toggle()">
+                <!-- 縮放側邊樹狀菜單 -->
+                <nb-action icon="menu-outline"></nb-action>
+            </a>
+            <div class="action-dropdown">
+                <a>
+                    <!-- 可供切換的語言項目 -->
+                    <nb-action icon="globe-outline" [nbContextMenu]="languageMenu"></nb-action>
+                </a>
+                <!-- 帳號登出功能 -->
+                <nb-user [nbContextMenu]="openUserMenu" name="{{ userName }}"></nb-user>
+            </div>
+        </div>
+    </nb-layout-header>
+
+    <!-- 側邊樹狀菜單 -->
+    <nb-sidebar>
+        <nb-menu [items]="items"></nb-menu>
+    </nb-sidebar>
+
+    <!-- 頁面內容 -->
+    <nb-layout-column class="colored-column-info">
+        <router-outlet></router-outlet>
+    </nb-layout-column>
+</nb-layout>

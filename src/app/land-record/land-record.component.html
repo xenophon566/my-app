@@ -1,0 +1,11 @@
+<div class="land-record">
+    <div>
+        <strong>(兄弟元件)</strong>
+    </div>
+    <br />
+    <label> 總筆數 </label>
+    <span>
+        <!-- 只要超過 3 個字串，也就是 1000 的時候，就會自行在千位數後面加上逗號 -->
+        {{ landRecords | separator }}
+    </span>
+</div>

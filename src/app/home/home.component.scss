@@ -1,0 +1,14 @@
+.home {
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .action-dropdown {
+            width: 12rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+    }
+}

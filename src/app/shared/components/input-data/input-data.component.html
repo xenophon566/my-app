@@ -1,0 +1,8 @@
+<nb-layout-column class="colored-column-info">
+    <p for="">地號 (子元件)</p>
+    <input type="text" nbInput placeholder="輸入地號" [(ngModel)]="item" />
+    &nbsp;
+    <button nbButton status="primary" (click)="create('add')">加入</button>
+    &nbsp;
+    <button nbButton status="danger" (click)="delete('remove')">刪除</button>
+</nb-layout-column>
