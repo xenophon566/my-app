@@ -3,6 +3,9 @@
 ## NPM Scripts
 
 ```
+// Angular-Cli
+"ng": "ng"
+
 // webpack 打包成靜態檔
 "build": "ng build",
 
@@ -12,14 +15,14 @@
 // Angular Unit Test
 "test": "ng test",
 
+// Angular ESLint
+"lint": "ng lint",
+
 // 啟動假資料系統 json server
 "mock": "json-server ./_mockserver/_db.js -c _mockserver/config.json",
 
 // Angular 自動產生註解網站 watch 模式下
 "compodoc-w": "compodoc -s -w",
-
-// Angular-Cli
-"ng": "ng"
 ```
 
 ---
@@ -35,5 +38,3 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/node-bvss5e)
