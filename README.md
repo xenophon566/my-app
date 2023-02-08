@@ -9,7 +9,7 @@
 // webpack 打包成靜態檔
 "build": "ng build",
 
-// 在 watch 模式下打包成靜態檔
+// 在 watch 模式下打包成靜態文檔
 "watch": "ng build --watch --configuration development",
 
 // Angular Unit Test
