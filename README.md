@@ -6,7 +6,7 @@
 // Angular-Cli
 "ng": "ng"
 
-// webpack 打包成靜態檔
+// webpack 打包成靜態文檔
 "build": "ng build",
 
 // 在 watch 模式下打包成靜態文檔
